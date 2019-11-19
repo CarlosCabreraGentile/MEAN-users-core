@@ -1,8 +1,8 @@
 # MEAN-users-core *Fazt* 
 
-##MEAN Curso - Mongodb, Express, Angular 6 y Nodejs, Parte 1 - Backend con Nodejs, Express y Mongodb
+MEAN Curso - Mongodb, Express, Angular 6 y Nodejs, Parte 1 - Backend con Nodejs, Express y Mongodb
 
-##Endpoints
+Endpoints
 
 ```bash
 GET /api/user/        // Get all users
