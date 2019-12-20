@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "debug": "node --inspect server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/server.js",
     "nodemon": "nodemon server/server.js"
@@ -12,6 +13,7 @@
   "author": "Carlos Cabrera Gentile <carloscgentile@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.7.11"
   },

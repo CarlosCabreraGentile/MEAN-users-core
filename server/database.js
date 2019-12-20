@@ -10,3 +10,8 @@ module.exports = {
     'secret': 'justAnAwesomeSecret',
     'database': _database
 }
+
+// module.exports = {
+//     database: 'mongodb://localhost/mean-users',
+//     secret: 'yoursecret'
+// }

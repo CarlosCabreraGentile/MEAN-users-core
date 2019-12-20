@@ -29,15 +29,39 @@ var list =  (req, res) => {
  */
 var create = (req, res) => {
 
-    var newUser = new User(req.body);
+    User.
+    // Find user with existing email
+        find({email: req.body.email})
+            .then((user) => {
+                if (user && user.length > 0) {
+                    return res.status(400).json({msg: 'Email already exist', user});
+                } else {
+                    // if email is available create a new user
+                    var newUser = new User(req.body);
 
-    newUser.save()
-        .then((user) => {
-            return res.status(201).json(user);
-        })
-        .catch((err) => {
-            return res.status(500).json(err);
-        })
+                    newUser.save()
+                        .then((user) => {
+                            return res.status(201).json(user);
+                        })
+                        .catch((err) => {
+                            return res.status(500).json(err);
+                        })
+                }
+            })
+            .catch((err) => {
+                console.log(err);
+                return res.status(500).json(err);
+            })
+
+    // var newUser = new User(req.body);
+
+    // newUser.save()
+    //     .then((user) => {
+    //         return res.status(201).json(user);
+    //     })
+    //     .catch((err) => {
+    //         return res.status(500).json(err);
+    //     })
 
 }
 
